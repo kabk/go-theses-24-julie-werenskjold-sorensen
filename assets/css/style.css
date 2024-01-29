@@ -123,8 +123,8 @@ p{
 
 #name{
   text-align: right;
+  margin-right: 3%;
   text-transform: uppercase;
-  margin-right: -45%;
 }
 
 
@@ -132,8 +132,6 @@ h1{
   color: var(--color-text-captions);
   font-size: 120px;
   text-align: center;
-  margin-left: -45%;
-  margin-right: -45%;
 }
 
 
@@ -141,8 +139,6 @@ h2{
   color: var(--color-text-captions);
   font-size: 57px;
   text-align: center;
-  margin-left: -45%;
-  margin-right: -45%;
 }
 
 
@@ -151,6 +147,11 @@ h3{
   font-style: italic;
   color: var(--color-text-captions);
   text-indent: 100px;
+}
+
+.chapter-header{
+  text-transform: uppercase;
+  font-style: normal;
 }
 
 
@@ -250,6 +251,10 @@ summary{
     padding-right: 5%; /* Adjust padding values as needed */
   }
 
+  #name{
+    padding: 5%; 
+  }
+  
   p {
     text-indent:50px; /* Adjust text-indent as needed */
     font-size: 14px;
@@ -264,22 +269,21 @@ summary{
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 14px;
     text-indent: 50px; /* Adjust text-indent as needed */
+    text-align: left;
   }
   #name{
     font-size: 14px;
-    padding: 10px; /* Adjust as needed */
-    margin: 10px; /* Adjust as needed */
   }
 
   h1,
   h2,
   h3,
-  #info
+  #name
    {
-    margin-left: 0; /* Reset margin-left */
-    margin-right: 0; /* Reset margin-right */
+    margin-left: 0;
+    margin-right: 0; 
   }
 }
 
@@ -310,6 +314,26 @@ summary{
 @media (min-width: 780px) and (max-width: 992px) {
 
   /* your overriding css properties here */
+
+  main {
+    padding-left: 5%; /* Adjust padding values as needed */
+    padding-right: 5%; /* Adjust padding values as needed */
+  }
+
+
+  #name{
+    padding: 5%; 
+  }
+
+  h1,
+  h2,
+  h3,
+  #name
+   {
+    margin-left: 0;
+    margin-right: 0; 
+  }
+
 
 }
 
