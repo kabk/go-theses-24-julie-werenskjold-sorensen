@@ -99,7 +99,6 @@ p{
   font-size: 1.4rem;
   text-align: justify;
   text-justify: inter-word;
-  color: green;
 }
 
 
@@ -160,6 +159,9 @@ h3{
 }
 
 
+.mobile-only-text {
+  display: none; /* Hide by default */
+}
 
 h4, h5, h6{
   /* h4-h5-h6 style */
@@ -249,6 +251,7 @@ summary{
 
   .mobile-only{
     display:block;
+    
   }
 
   nav{
@@ -264,19 +267,32 @@ summary{
   
   nav a {
     text-decoration: none;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    margin-left: 0.5rem;
+
   }
   
+  .mobile-only-text {
+    display: inline; /* Display only on mobile */
+  }
+
+  /* .chapter-head{
+    display: none;
+  } */
+
   .burger-menu {
     display: flex;
     align-items: center;
     position: relative;
     padding-left: 1rem;
+    margin-top: -0.6rem;
   }
   
   .burger-icon {
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
     color: var(--color-text-link);
+    text-transform: uppercase;
+    
   }
   
   .dropdown {
@@ -300,7 +316,7 @@ summary{
   
   .dropdown li {
     margin-bottom: 1rem;
-    background-color: var(--color-text-link-hover);
+    /* background-color: var(--color-text-link-hover); */
   }
 
   .button {
@@ -311,7 +327,6 @@ summary{
     text-decoration: none;
     background-color: var(--color-text-link-hover);
     color: white;
-    border: none;
   }
   
 
@@ -326,24 +341,27 @@ summary{
 
   p {
     text-indent:3rem; /* Adjust text-indent as needed */
-    font-size: 14px;
+    font-size: 0.8rem;
   }
 
   h1 {
-    font-size: 85px; /* Adjust font size as needed */
+    font-size: 5.8rem; /* Adjust font size as needed */
+    padding-left: 1rem;
+    line-height: 100%;
+    
   }
 
   h2 {
-    font-size: 44px; /* Adjust font size as needed */
+    font-size: 2.1rem; /* Adjust font size as needed */
   }
 
   h3 {
-    font-size: 14px;
+    font-size: 1.5rem;
     text-indent: 3rem; /* Adjust text-indent as needed */
     text-align: left;
   }
   #name{
-    font-size: 14px;
+    font-size: 0.8rem;
   }
 
   h1,
