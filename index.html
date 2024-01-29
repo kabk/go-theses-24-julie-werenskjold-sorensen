@@ -1,333 +1,360 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Thesis as a Web Page</title>
-  <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<!-- meta tags, fill them with website meta infos -->
+	<meta name="description" content="Description of your web page" />
+	<meta name="keywords" content="Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 ..." />
+	<meta name="author" content="Name of the author/owner of the webpage's content" />
+
+	<!-- favicon, fill with a 512x512px .png image named 'favicon.png' -->
+	<link rel="icon" href="assets/images/favicon/favicon.png" />
+
+	<!-- website title, visible in the browser window and on link sharing -->
+	<title>Website title</title>
+
+	<!-- links for extensions and dependencies -->
+
+	<!-- css -->
+	<!-- first link your CSS dependences, here is normalize, a CSS 'reset' for cross-browser appearence uniformity -->
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<!-- you stylesheet -->
+	<link rel="stylesheet" href="assets/css/style.css?ver=1.0">
+
+	<!-- js -->
+	<!-- first link your javascript dependencies, here as an example is Jquery -->
+	<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+	<!-- your function scripts -->
+	<script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
+
 </head>
+
 <body>
-<header id="title-block-header">
-<h1 class="title">Thesis as a Web Page</h1>
-</header>
-<h1 id="thesis-as-a-web-page">Thesis as a Web Page</h1>
-<h3
-id="during-nine-classes-you-will-design-and-code-a-web-version-of-your-thesis-and-eventually-publish-it-on-the-kabks-github-repository-as-a-one-pager.">During
-nine classes you will design and code a web version of your thesis and
-eventually publish it on the KABK’s GitHub repository as a
-<em>one-pager</em>.</h3>
-<h3
-id="the-assignment-is-designed-to-foster-code-literacy-and-train-you-to-navigate-the-specifics-of-design-and-typesetting-for-the-web-by-making-informed-choices.">The
-assignment is designed to foster code literacy and train you to navigate
-the specifics of design and typesetting for the web by making informed
-choices.</h3>
-<h2 id="the-brief">1. The brief</h2>
-<ul class="incremental">
-<li><strong>Conceptualize, design and code</strong> a web version of
-your thesis in the form of a one-pager.</li>
-<li><strong>Publish</strong> (deploy) it on the KABK’s GitHub repo.</li>
-</ul>
-<h3 id="concept">Concept</h3>
-<ul class="incremental">
-<li>Organize your material into a thoughtful design concept, taking into
-account the affordances of the web.</li>
-<li>There’s a <strong>relationship</strong> between the
-<strong>content</strong> of your thesis, its <strong>formal</strong>
-aspect and its <strong>navigational/experiential</strong> aspect.</li>
-</ul>
-<h3 id="design">Design</h3>
-<ul class="incremental">
-<li>First and foremost, your web page is meant to be
-<strong>accessible</strong> and <strong>legible</strong></li>
-<li>Your web page is <em>mobile-first</em>, meaning that the experience
-of readers on <strong>mobile devices</strong> takes priority over
-desktop experiences.</li>
-</ul>
-<h3 id="code">Code</h3>
-<ul class="incremental">
-<li>Your code is <strong>semantically-written</strong> (you use correct
-<code>&lt;html&gt;</code> tags).</li>
-<li>Your website <strong>loads moderately fast</strong> (media files are
-compressed accordingly or uploaded to remote hosting services).</li>
-</ul>
-<h2 id="learning-objectives">2. Learning objectives</h2>
-<p>The learning objectives cover two main areas</p>
-<ul class="incremental">
-<li><strong>Web typography</strong></li>
-<li><strong>Code literacy</strong></li>
-</ul>
-<p>Upon successful completion of the course you will be able to:</p>
-<ul class="incremental">
-<li>Apply your typographic knowledge and coding skills to the design of
-a long-read web page, working iteratively and reflecting critically on
-your process</li>
-<li>Demonstrate the ability to create and develop an original web
-concept, channel it into sound editorial design choices</li>
-<li>Integrate feedback and carry a project through to the publishing
-phase on GitHub Pages</li>
-<li>Apply principles of self-directed learning to acquire greater code
-fluency and the ability to work cooperatively</li>
-<li>Identify key aspects of typography for web-based academic papers
-with special attention to legibility and accessibility</li>
-<li>Show fluency in the breadth of disciplines that overlap with web
-design, with exploration into Markdown and user-experience design</li>
-</ul>
-<h2 id="evaluation-criteria">3. Evaluation criteria</h2>
-<p>Formative feedback is an ongoing process and is delivered through
-tutoring, group discussion and peer input. After collectives, you can
-expect an indication of your process to date together with guidance on
-how to improve your results. At the end of the assignment period, you
-can expect written feedback.</p>
-<h3 id="concept-1">Concept</h3>
-<h4
-id="articulate-a-meaningful-relationship-between-website-designcode-and-content">Articulate
-a meaningful relationship between website design/code and content</h4>
-<p>Competency:</p>
-<ul class="incremental">
-<li>Communication skills</li>
-</ul>
-<p><strong>Pass</strong></p>
-<p>The website proposes an original concept in relation to its content,
-and the thought / intention / choice about its functionalities is
-clearly visible</p>
-<p><strong>Fail</strong></p>
-<p>The website does not relate at all to its content, and there is no
-thought / intention / choice nor effort about its functionalities</p>
-<h3 id="design-and-typography">Design and Typography</h3>
-<h4 id="thoughtful-web-design-and-typography">Thoughtful web design and
-typography</h4>
-<p>Competency:</p>
-<ul class="incremental">
-<li>Creative ability</li>
-</ul>
-<p><strong>Pass</strong></p>
-<p>The typography supports the thesis argument and is organized in a
-thoughtful design. The typographic potential of the browser is being
-explored, while its limitations are taken into account.</p>
-<p><strong>Fail</strong></p>
-<p>The typography bears no relationship to the web idioms of html and
-css. It’s basically a “pdf in the browser”.</p>
-<h3 id="engagement">Engagement</h3>
-<h4
-id="genuine-interest-in-developing-ones-skill-set-and-ability-to-learn-from-the-assignment">Genuine
-interest in developing one’s skill set and ability to learn from the
-assignment</h4>
-<p>Competencies:</p>
-<ul class="incremental">
-<li>Ability to grow and innovate</li>
-<li>Ability for critical reflection</li>
-</ul>
-<p><strong>Pass</strong></p>
-<p>Has proactively researched their ideas, prototyped them, and been
-able to debug their project</p>
-<p><strong>Fail</strong></p>
-<p>Has not expressed or researched potential ideas, has not prototyped
-these, has not been able de debug their project</p>
-<h3 id="execution">Execution</h3>
-<h4
-id="ability-to-deliver-a-website-accessible-on-mobile-devices-as-well-as-on-desktop-devices-uploaded-to-github-pages">Ability
-to deliver a website accessible on mobile devices as well as on desktop
-devices, uploaded to Github Pages</h4>
-<p>Competency:</p>
-<ul class="incremental">
-<li>External awareness</li>
-</ul>
-<p><strong>Pass</strong></p>
-<p>The website works on mobile as well as desktop without functionality
-loss, uses semantic html tags for navigation, links, main, and text
-elements, the website loads fast.</p>
-<p><strong>Fail</strong></p>
-<p>It’s not possible or very difficult to access the website because of
-either structural or loading issues. If works on limited devices.
-structure of the code. There is no logic to the semantic structure of
-the code</p>
-<h3 id="attendance">Attendance</h3>
-<h4 id="the-minimum-attendance-required-is-7-classes-80">The minimum
-attendance required is 7 classes (± 80%)</h4>
-<p>Competencies:</p>
-<ul class="incremental">
-<li>Organizational ability</li>
-<li>Ability to collaborate</li>
-</ul>
-<p><strong>Pass</strong></p>
-<p>Has attended required classes and has attended sufficient individual
-and group talks</p>
-<p><strong>Fail</strong></p>
-<p>Has not been in class, has not attended any individual or group
-talks, has not been in touch with the teachers</p>
-<h2 id="thesis-landing-page-non-graded">4. Thesis landing page
-(non-graded)</h2>
-<p>We’ll need a small group to make a <strong>landing page</strong> for
-this year’s theses. Examples from previous years: <a
-href="https://kabk.github.io/go-theses-22/">2022</a>, <a
-href="https://kabk.github.io/go-theses-21/">2021</a>, <a
-href="https://kabk.github.io/go-theses-20/">2020</a>, and <a
-href="https://kabk.github.io/go-theses-19/">2019</a>. It would be nice
-to have this sorted out <strong>before collectives</strong>.</p>
+
+	<!-- webpage content goes here -->
+
+	<div class="page-wrapper">
+
+		<header>
+			<nav>
+				<ul>
+					<li><a href="#intro">Introduction</a></li>
+					<li><a href="#chapter-1">Chapter 1</a></li>
+					<li><a href="#chapter-2">Chapter 2</a></li>
+					<li><a href="#chapter-3">Chapter 3</a></li>
+					<li><a href="#conclusion">Conclusion</a></li>
+					<li><a href="#bibliography">Bibliography</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<h1>Where did the wild woman run?</h1>
+		<div class="imagery">(INSERT IMAGE VISUAL HERE)</div>
+		<h2>A search into the entanglement of Danish landscape and womanhood</h2>
+
+		<div class="info" id="name"> By Julie Werenskjold Sørensen</div>
+
+		<main>
+
+			<h3 id="intro">Introduction</h3>
+
+			<p style="text-indent: 0px;">
+				Let me start out like so many other people with; we live in a fast-pace world bla bla bla - but ehm we
+				do, and somewhere along the lines we lost track. We, the human species, are evolving like crazy and
+				developing technologies nobody a decade ago could’ve dreamed off (we all still patiently await the
+				flying car), but I want to put the human and nature back in focus. The way in which we view the natural
+				world has changed drastically, and therefore so has the way in which we think and write about it. The
+				Danish book; Ny Jord – Tidskrift for Naturkritik (New Earth: Journal of Nature Criticism) by Peter
+				Meedom and Jeppe Sengupta Carstensen, came about based on a desire to establish a new critical concept –
+				Nature Criticism . “The preconditions for nature criticism, we believe, are once and for all to move
+				beyond the idea that human beings and nature are separated or can in any way be kept apart.”(23). I want
+				to add to this conversation by bringing ecofeminism to the table as a hot topic, because just like we
+				can’t separate the human from nature, we can’t separate women’s oppression from the domination of
+				nature.
+			</p>
+
+			<p>
+				I will be exploring the evolution of womanhood and the interrelations to the forest as a symbol of
+				nature, with focus on the Danish womanhood. The layman term ‘Mother earth’ is throw around usually
+				without hesitation, as we speak of the planet we inhabit, yet somewhere down the line, the majority
+				forgot what that embodies. The personification of nature is rooted in womanhood, and the life-giving and
+				nurturing aspect of nature is embodied in the form of the mother, thereby welding the understanding of
+				womanhood and the mother. This type of thinking has deep ties to spirituality, ancestry and the
+				collective unconscious, and with the Danes’ mindset turning more and more individualistic, I want to
+				allow for a speculative groundwork in order to gain insight into when this deep understanding of the
+				entanglement of womanhood and the idea of the enchanted forest started to drift. I am offering an
+				insight into the wilderness of my entangled thoughts of the Danish wild womanhood, whilst including
+				thoughts on the term ‘womanhood’, the personification of Mother Earth, Norse Mythology, The carrier bag
+				theory of fiction, the wolf as a symbol of women’s wilderness, archetypes, the Jelling Dynasty and witch
+				hunt in Denmark.
+			</p>
+
+			<p>
+				Oh and let’s not forget about the Patriarchy – that’s going to be a running theme. Allow me to ask
+				questions with no answers, contemplate my own words, contradict my own words, and possibly leave you
+				hanging. I’m just human.
+			</p>
+
+			<h3 id="chapter-1">Womanhood and the Collective Unconscious</h3>
+
+			<p style="text-indent: 0px;">
+				If you ask me there is no denying that I live in a part of the world which has been designed and curated
+				by white men for white men (it being North Europe), and with the western patriarchy walking hand in hand
+				with colonialism, deep-rooted marks have been left on a great deal of the world population, and an
+				example of this is on how we perceive the meaning of womanhood. It is important to note that my
+				observation and judgments are based on my own heritage and upbringing in Denmark . Despite the
+				occasional (read; widespread) ignorance - or as Carl Jung calls it; our collective unconscious, which
+				boils down to; being the believe that a part of the mind contains memories and impulse which are based
+				on archetypal personalities that are universal symbols, which represent common human experiences and
+				emotions (1). The idea of this being that the individual is not aware off these instincts. To this day,
+				we tend to disregard our ancestral experiences as sources of knowledge and guidance. Whether this sense
+				of collective unconscious is something we are born with according to Jung or as John Locke argues;
+				something which we are ‘taught’ in our upbringing after birth (2), will not be the focus of this
+				speculative piece (how saying is it that this debate was established by white men (18)? Just sayin’).
+				However, the focus on their studies of the archetypes and ancestral experiences as sources of knowledge
+				and guidance will be.
+			</p>
+
+			<p>
+				Womanhood: by definition is “the state or condition of being a woman, the qualities considered to be
+				natural to or characteristics of a woman, and women considered collectively” (3). But what does it mean
+				to be a woman? “An adult female human being.” – great thanks google… This is where some believe we could
+				enter clouded waters, because what does it mean to be female? I choose to reject the definition by
+				google. The aim of this is not discussing sex, gender, binary and the non-binary, however in order to
+				understand the viewpoint of this writing it is important that we have a mutual understanding – between
+				author and reader – that womanhood, and the feeling of being a woman does not have to do with what is
+				defined as biological sex. The focus here is on the oppressed women – not only females, however the base
+				of research that ground the stereotypes which well be explored have been based on women with wombs. It
+				is an effort to reclaim the mean of women, in this case, in the context of the forest.
+			<p>
+				Mother Earth or Mother Nature. There are countless of examples of cultures and Mythologies, which have
+				an Earth Goddess or God, however a red thread is that the Earth is most commonly depicted as a Goddess.
+				A woman. To name a few; the Akan Mythology, Asase Ya, also known as Abrewa Akan, meaning old lady, is an
+				ancient religious figure worshiped by the indigenous people of Guinea coast. She also represents
+				procreation, truth, love, fertility, peace and the land of Akan (9). In Sumerian Mythology, Nihursag is
+				the mother of Goddess, Gods and Mother of Men for her part in creating both divine and mortal entities
+				(10). In Norse Mythology, although not mentioned often in stories, the mother of Thor; Jörð old Norse
+				for soil/earth, is the personification and Goddess of earth. And we can of course not forget about the
+				The Goddess Gaia from Greek Mythology, called, the mother earth or the earth moth (12), and there are
+				many more out there.
+			</p>
+			<p>
+				Nature, the word itself, is derived from the Latin word natura, which in ancient archetype of the mother
+				is a natural caretaker, maintaining and sustaining life through emotional, physical and spiritual
+				support, healing and nurturing. “…considered to be natural to or characteristics of a woman,…” (3).
+				Putting two and two together, there is little to no room of escaping the metaphor of Mother Nature. Due
+				to the entanglement of womanhood and the mother, we can’t view one subjectively without the other,
+				motherhood follows the lead of womanhood, however it is not what it means to be a woman.
+			</p>
+			<p>
+				Let’s take a trip far back in time, to visit our friends Adam and Eve, the “original” human couple, from
+				the Old Testament, one of the many books which supposably embodies the answers to all life – the ick.
+				The most of us knows the story; Eve couldn’t stand the temptation of the forbidden fruit of the tree of
+				knowledge of good and evil and gave in after the devil disguised as a serpent, started encouraging her,
+				followed not long after by Adam. When oh middy God found out ‘he’ felt it fair to send the couple from
+				the Garden of Eden into the world. ‘He’ punished the female body with bearing children, excruciating
+				pain at childbirth (also called labor), and the male with the oh so very labor (ironic) intensive of
+				grooming of the ‘accursed’ grounds (Earth) (4). Some argue this was the birth of the patriarchy we live
+				in now. But whether we choose to believe the stories of the bible or not, there have been people on
+				earth for thousands of years, and we are brought up to believe the first tool of humankind was the
+				spear. The tool of hunting and killing. The commonly accepted fact: a male hero , bringing home the pray
+				and the gasp worthy story of the hunt. In her text The Carrier Bag Theory of Fiction, Ursula K. Le Guin
+				offers a rewrite of ‘our’ narrative by proposing that the first tool was a shell, a net, a ling, a sack,
+				a bottle, a pot, a holder. A recipient – A bag. This is narrative also toggles the stereotypical role of
+				importance of the source of survival, putting the gathering and harvesting as the stable source of life
+				in comparison to the meat, thereby offering the narrative of humankind as gathers and harvesters rather
+				than hunters and killers. I choose to reject the killer story and embrace the slow story, the steady
+				story, the part of the story which offers the recipient as the source of survival. The narrative of the
+				gatherers.
+			</p>
+			<p>
+				This is a crucial toggle of our narrative, as the hunters were typically men and gathers were women,
+				meaning we change the story of survival based on the man and turn our focus to the women. A narrative
+				which has been neglected for too long and left marks in women around the world. “The trouble is, we’ve
+				all let ourselves become part of the killer story, and so we may get finished along with it. Hence it is
+				with a certain feeling of urgency that I seek the nature, subject, words of the other story, the untold
+				one, the life story.” (16, p 2). The relation of womanhood and nature is a bond we cannot neglect, yet
+				that is exactly what many of us have done for centuries. We have become greatly separated from our
+				ancestors from back when we were a group of gathers, and this is a mark which is rooted deeply within
+				us. How is it women have played such crucial roles of survival, and that the exact skill of gathering
+				and harvesting, was eventually what went on to be one of the causes for mass-hysteria and the witch
+				hunts through Europe? And where does it leave us now? Stay tuned because we are far from done, but
+				before entering the era off witchcraft, let’s go even further back in time; back to the Middle Ages, the
+				Norsemen – the Vikings.
+			</p>
+		
+
+			<h3 id="chapter-2"><span>Queens of the Monarchy and Witchcraft</span></h3>
+
+			<p style="text-indent: 0px;">
+				If you ask me there is no denying that I live in a part of the world which has been designed and curated
+				by white men for white men (it being North Europe), and with the western patriarchy walking hand in hand
+				with colonialism, deep-rooted marks have been left on a great deal of the world population, and an
+				example of this is on how we perceive the meaning of womanhood. It is important to note that my
+				observation and judgments are based on my own heritage and upbringing in Denmark . Despite the
+				occasional (read; widespread) ignorance - or as Carl Jung calls it; our collective unconscious, which
+				boils down to; being the believe that a part of the mind contains memories and impulse which are based
+				on archetypal personalities that are universal symbols, which represent common human experiences and
+				emotions (1). The idea of this being that the individual is not aware off these instincts. To this day,
+				we tend to disregard our ancestral experiences as sources of knowledge and guidance. Whether this sense
+				of collective unconscious is something we are born with according to Jung or as John Locke argues;
+				something which we are ‘taught’ in our upbringing after birth (2), will not be the focus of this
+				speculative piece (how saying is it that this debate was established by white men (18)? Just sayin’).
+				However, the focus on their studies of the archetypes and ancestral experiences as sources of knowledge
+				and guidance will be.
+			</p>
+
+			<p>
+				Womanhood: by definition is “the state or condition of being a woman, the qualities considered to be
+				natural to or characteristics of a woman, and women considered collectively” (3). But what does it mean
+				to be a woman? “An adult female human being.” – great thanks google… This is where some believe we could
+				enter clouded waters, because what does it mean to be female? I choose to reject the definition by
+				google. The aim of this is not discussing sex, gender, binary and the non-binary, however in order to
+				understand the viewpoint of this writing it is important that we have a mutual understanding – between
+				author and reader – that womanhood, and the feeling of being a woman does not have to do with what is
+				defined as biological sex. The focus here is on the oppressed women – not only females, however the base
+				of research that ground the stereotypes which well be explored have been based on women with wombs. It
+				is an effort to reclaim the mean of women, in this case, in the context of the forest.
+				<br><br>
+				Mother Earth or Mother Nature. There are countless of examples of cultures and Mythologies, which have
+				an Earth Goddess or God, however a red thread is that the Earth is most commonly depicted as a Goddess.
+				A woman. To name a few; the Akan Mythology, Asase Ya, also known as Abrewa Akan, meaning old lady, is an
+				ancient religious figure worshiped by the indigenous people of Guinea coast. She also represents
+				procreation, truth, love, fertility, peace and the land of Akan (9). In Sumerian Mythology, Nihursag is
+				the mother of Goddess, Gods and Mother of Men for her part in creating both divine and mortal entities
+				(10). In Norse Mythology, although not mentioned often in stories, the mother of Thor; Jörð old Norse
+				for soil/earth, is the personification and Goddess of earth. And we can of course not forget about the
+				The Goddess Gaia from Greek Mythology, called, the mother earth or the earth moth (12), and there are
+				many more out there.
+				<br><br>
+				Nature, the word itself, is derived from the Latin word natura, which in ancient archetype of the mother
+				is a natural caretaker, maintaining and sustaining life through emotional, physical and spiritual
+				support, healing and nurturing. “…considered to be natural to or characteristics of a woman,…” (3).
+				Putting two and two together, there is little to no room of escaping the metaphor of Mother Nature. Due
+				to the entanglement of womanhood and the mother, we can’t view one subjectively without the other,
+				motherhood follows the lead of womanhood, however it is not what it means to be a woman.
+				<br><br>
+				Let’s take a trip far back in time, to visit our friends Adam and Eve, the “original” human couple, from
+				the Old Testament, one of the many books which supposably embodies the answers to all life – the ick.
+				The most of us knows the story; Eve couldn’t stand the temptation of the forbidden fruit of the tree of
+				knowledge of good and evil and gave in after the devil disguised as a serpent, started encouraging her,
+				followed not long after by Adam. When oh middy God found out ‘he’ felt it fair to send the couple from
+				the Garden of Eden into the world. ‘He’ punished the female body with bearing children, excruciating
+				pain at childbirth (also called labor), and the male with the oh so very labor (ironic) intensive of
+				grooming of the ‘accursed’ grounds (Earth) (4). Some argue this was the birth of the patriarchy we live
+				in now. But whether we choose to believe the stories of the bible or not, there have been people on
+				earth for thousands of years, and we are brought up to believe the first tool of humankind was the
+				spear. The tool of hunting and killing. The commonly accepted fact: a male hero , bringing home the pray
+				and the gasp worthy story of the hunt. In her text The Carrier Bag Theory of Fiction, Ursula K. Le Guin
+				offers a rewrite of ‘our’ narrative by proposing that the first tool was a shell, a net, a ling, a sack,
+				a bottle, a pot, a holder. A recipient – A bag. This is narrative also toggles the stereotypical role of
+				importance of the source of survival, putting the gathering and harvesting as the stable source of life
+				in comparison to the meat, thereby offering the narrative of humankind as gathers and harvesters rather
+				than hunters and killers. I choose to reject the killer story and embrace the slow story, the steady
+				story, the part of the story which offers the recipient as the source of survival. The narrative of the
+				gatherers.
+				<br><br>
+				This is a crucial toggle of our narrative, as the hunters were typically men and gathers were women,
+				meaning we change the story of survival based on the man and turn our focus to the women. A narrative
+				which has been neglected for too long and left marks in women around the world. “The trouble is, we’ve
+				all let ourselves become part of the killer story, and so we may get finished along with it. Hence it is
+				with a certain feeling of urgency that I seek the nature, subject, words of the other story, the untold
+				one, the life story.” (16, p 2). The relation of womanhood and nature is a bond we cannot neglect, yet
+				that is exactly what many of us have done for centuries. We have become greatly separated from our
+				ancestors from back when we were a group of gathers, and this is a mark which is rooted deeply within
+				us. How is it women have played such crucial roles of survival, and that the exact skill of gathering
+				and harvesting, was eventually what went on to be one of the causes for mass-hysteria and the witch
+				hunts through Europe? And where does it leave us now? Stay tuned because we are far from done, but
+				before entering the era off witchcraft, let’s go even further back in time; back to the Middle Ages, the
+				Norsemen – the Vikings.
+
+			</p>
+
+
+			<h3 id="chapter-3"><span>The wild woman and the wolf</h3>
+
+			<p style="text-indent: 0px;">
+				Proin non pellentesque leo. Integer finibus luctus mi eu egestas. Integer placerat non tortor id
+				lacinia. Donec faucibus fermentum porta. Praesent fringilla sapien id tempor vestibulum. Morbi egestas
+				dolor vitae lacus mattis, id posuere nulla viverra. Ut ultricies placerat mi, et porttitor nunc sodales
+				sit amet. Cras vehicula lectus eget tortor efficitur, sit amet imperdiet velit varius. Pellentesque
+				ultricies purus pretium magna efficitur, eget interdum orci dignissim. Orci varius natoque penatibus et
+				magnis dis parturient montes, nascetur ridiculus mus. Vestibulum finibus, lorem at blandit luctus, massa
+				libero feugiat ex, non fringilla ante sem quis lorem. Cras ac consequat dui. Interdum et malesuada fames
+				ac ante ipsum primis in faucibus. Pellentesque suscipit turpis leo, at dapibus justo rutrum sed. In nunc
+				nunc, sagittis eget rutrum consectetur, tempus vitae augue.
+			</p>
+
+
+			<p>
+				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem
+				dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt
+				pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta,
+				malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam
+				orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem
+				porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed
+				euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros
+				nec turpis.
+			</p>
+
+			<h3 id="conclusion"><span>Conclusion</span></h3>
+
+			<p>
+				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem
+				dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt
+				pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta,
+				malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam
+				orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem
+				porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed
+				euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros
+				nec turpis.
+			</p>
+
+
+			<h3 id="bibliography"><span>Bibliography</span></h3>
+
+			<p>
+				Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a sem
+				dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. In tincidunt
+				pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. Fusce et ante porta,
+				malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. Nullam
+				orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem
+				porttitor eget. Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed
+				euismod odio. Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros
+				nec turpis.
+			</p>
+
+
+		</main>
+
+
+
+		<footer>
+
+			<hr>
+			<!-- this is basically a ruler -->
+
+			<p>
+				Last edit date: 2023/12/11
+			</p>
+
+		</footer>
+
+
+
+	</div>
+
+
+
+	<!-- end webpage content -->
+
+
+
 </body>
+
 </html>
