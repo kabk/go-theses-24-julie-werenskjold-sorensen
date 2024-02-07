@@ -20,26 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var chapterHeaders = document.querySelectorAll('.chapter-header');
 
-    function updateStickyHeaders() {
-      var scrollY = window.scrollY || window.pageYOffset;
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   var chapterHeaders = document.querySelectorAll('.chapter-header');
 
-      for (var i = chapterHeaders.length - 1; i >= 0; i--) {
-        var headerOffset = chapterHeaders[i].offsetTop;
+  //   function updateStickyHeaders() {
+  //     var scrollY = window.scrollY || window.pageYOffset;
 
-        if (scrollY >= headerOffset) {
-          chapterHeaders.forEach(header => header.classList.remove('active'));
-          chapterHeaders[i].classList.add('active');
-          break;
-        }
-      }
-    }
+  //     for (var i = chapterHeaders.length - 1; i >= 0; i--) {
+  //       var headerOffset = chapterHeaders[i].offsetTop;
 
-    window.addEventListener('scroll', updateStickyHeaders);
-    window.addEventListener('resize', function () {
-      chapterHeaders.forEach(header => header.classList.remove('active'));
-      updateStickyHeaders();
-    });
-  });
+  //       if (scrollY >= headerOffset) {
+  //         chapterHeaders.forEach(header => header.classList.remove('active'));
+  //         chapterHeaders[i].classList.add('active');
+  //         break;
+  //       }
+  //     }
+  //   }
+
+  //   window.addEventListener('scroll', updateStickyHeaders);
+  //   window.addEventListener('resize', function () {
+  //     chapterHeaders.forEach(header => header.classList.remove('active'));
+  //     updateStickyHeaders();
+  //   });
+  // });

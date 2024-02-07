@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
-
-/* 
-  You can use 'fontsquirrel' (https://www.fontsquirrel.com) 
-  or 'transfonter' (https://transfonter.org)
-  to generate your own font for the web from .ttf or .oft files 
-*/
-
 @font-face {
     font-family: 'Keroine';
     src: url('../fonts/Keroine/KeroinePRO-DouxExtreme.otf');
@@ -27,14 +19,17 @@
 /* VARIABLES */
 
 :root {
-  /* Color values */
   --color-background: rgb(255, 255, 255);
   --color-text: rgb(59, 18, 6);
-  --color-text-link: rgb(224, 199, 207);
-  --color-text-link-hover: rgb(118, 24, 55);
+  --color-text-link: rgb(253, 197, 197);
+  --color-text-link-hover: rgb(248, 0, 0);
   font-family: 'Keroine';
   --margin: 0;
 }
+
+
+
+
 
 /* GENERAL STYLES */
 
@@ -52,6 +47,7 @@ body {
   width:100%;
   height:auto;
   overflow-y:auto;
+  counter-reset: sidenote-counter;
 }
 
 a {
@@ -85,12 +81,12 @@ height: 200px;
 }
 
 main{
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   flex-wrap: wrap;
-  text-align:justify;
-  padding-left:25%;
-  padding-right:25%;
+  /* text-align:justify; */
+  padding-left: 25%;
+  padding-right: 25%;
   box-sizing: content-box;
 }
 
@@ -101,12 +97,17 @@ p{
   text-justify: inter-word;
 }
 
+p > .sidenote-wrapper {
+  /* color: blueviolet; */
+  text-indent: 0;
+}
 
 #name{
   text-align: right;
   font-size: 1rem;
   margin-right: 3%;
   text-transform: uppercase;
+  color: var(--color-text-link); 
 }
 
 
@@ -130,7 +131,10 @@ h2{
   padding-left:3rem;
   padding-right:3rem;
   font-weight: normal;
-  text-decoration: underline;
+  font-style: italic;
+  text-decoration: underline 0.125rem;
+  /* text-decoration-style: wavy;
+  text-underline-offset: 0.9rem ; */
 }
 
 
@@ -147,41 +151,129 @@ h3{
 }
 
 .chapter-header{
+  display: block;
   text-transform: uppercase;
   padding: 0;
-  top: 2rem;
   z-index: 80;
-  position: sticky;
-  left: 2rem;
-  line-height: 25px;
-  margin-left: -45%;
-
+  /* left: 1rem; */
+  line-height: 20px;
+  margin-left: -47%;
 }
 
+#chp-head-0,#chp-head-1, #chp-head-2,#chp-head-3,#chp-head-4,#chp-head-5,#chp-head-6 {
+  position: sticky;
+}
+
+#chp-head-0{
+  top: 1.5rem;
+}
+
+#chp-head-1 {
+  top: 3.5rem;
+}
+
+#chp-head-2 {
+  top: 5.5rem;
+}
+
+#chp-head-3 {
+  top: 7.5rem;
+}
+
+#chp-head-4 {
+  top: 9.5rem;
+}
+
+#chp-head-5 {
+  top: 11.5rem;
+}
+
+#chp-head-6 {
+  top: 13.5rem;
+}
 
 .mobile-only-text {
   display: none; /* Hide by default */
 }
 
-h4, h5, h6{
-  /* h4-h5-h6 style */
+
+/* footnotes */
+
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -45%;
+    width: 50%;
+    /* margin-top: 1rem; */
+    margin-bottom: 0;
+    margin-left: 0.3rem;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    /* padding: 1.5rem; */
+    padding-left: 1.5rem;
+    vertical-align: baseline;
+    position: relative;
+    text-align: left;
+    border: 1rem solid white;
+    padding-top: 1rem;
+
 }
 
-p{
-  /* paragraph style */
+.sidenote-number {
+  counter-increment: sidenote-counter;
 }
 
-ol, ul{
-  /* ordered list and unordered list styles */
+.sidenote-number:after,
+.sidenote:before {
+  position: relative;
+  vertical-align: baseline;
 }
 
-blockquote{
-  /* blockquote element style */
+.sidenote-number:after {
+  content: counter(sidenote-counter);
+  font-size: 1rem;
+  top: -0.5rem;
+  left: 0.1rem;
 }
 
-hr{
-  /* horizontal rule style */
+.sidenote:before {
+  content: counter(sidenote-counter) " ";
+  font-size: 1rem;
+  top: -0.5rem;
 }
+
+input.margin-toggle {
+  display: none;
+}
+
+
+label.margin-toggle:not(.sidenote-number) {
+  display: none;
+}
+
+#chapter-6{
+  color: var(--color-text-link);
+}
+
+.bibliography-text > p:not(b > p){
+  color: var(--color-text-link);
+  font-size: 1rem;
+  text-align: left;
+}
+
+.bibliography-text > p:hover:not(b > p) {
+  color: var(--color-text-link-hover);
+}
+
+
+
+
+span{
+  color: var(--color-text-link-hover);
+}
+
+
 
 
 
@@ -193,25 +285,6 @@ div.page-wrapper {
   /* the element that 'wraps' everything */
   padding: var(--margin);
 }
-
-/* navigation */
- 
-nav{
-  
-}
-
-/* content */
-
-main{
- 
-}
-
-summary{
-  
-}
-
-
-
 
 
 
@@ -234,6 +307,15 @@ summary{
 
 
 
+
+
+
+
+
+
+
+
+
 /* WEBSITE MEDIA QUERIES */
 
 /* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
@@ -245,56 +327,136 @@ summary{
 
   /* utility classes, mobile */
 
+  main {
+    padding-left: 5%; /* Adjust padding values as needed */
+    padding-right: 5% !important; /* Adjust padding values as needed */
+  }
+
   .desktop-only{
     display:none;
   }
 
   .mobile-only{
     display:block;
-    
   }
 
-  nav{
+
+  #name{
+    padding: 5%;
+  }
+
+  p {
+    text-indent:3rem; /* Adjust text-indent as needed */
+    font-size: 0.8rem;;
+  }
+
+  h1 {
+    font-size: 5.8rem; /* Adjust font size as needed */
+    padding-left: 1rem;
+    line-height: 100%;
+  }
+
+  h2 {
+    font-size: 2.1rem; /* Adjust font size as needed */
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    text-indent: 3rem; /* Adjust text-indent as needed */
+    text-align: left;
+  }
+  #name{
+    font-size: 0.8rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  #name
+   {
+    margin-left: 0;
+    margin-right: 0; 
+  }
+  
+  p a {
+    text-indent: 2em; /* Adjust the indent size as needed */
+  }
+
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    margin-top: -0.6rem;
+  }
+
+  .burger-icon {
+    color: var(--color-text-link);
+    text-transform: uppercase;
+  }
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+}
+
+.sidenote,
+.marginnote {
+    display: none;
+}
+
+.margin-toggle:checked + .sidenote,
+.margin-toggle:checked + .marginnote {
+    display: block;
+    float: left;
+    font-size: 0.8rem;
+    left: 1rem;
+    clear: both;
+    width: 75%;
+    margin: 1rem 2.5%;
+    /* vertical-align: baseline; */
+    position: relative;
+}
+
+nav{
     display: flex;
     margin-right: 2%;
   }
   
-  nav ul {
+nav ul {
     list-style: none;
     margin-left: 2%;
     padding: 0;
   }
   
-  nav a {
+nav a {
     text-decoration: none;
     /* text-transform: uppercase; */
     margin-left: 0.5rem;
-
   }
   
-  .mobile-only-text {
-    display: inline; /* Display only on mobile */
-  }
-
-  /* .chapter-head{
-    display: none;
+  /* .mobile-only-text {
+    display: inline; 
   } */
 
-  .burger-menu {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-left: 1rem;
-    margin-top: -0.6rem;
-  }
-  
-  .burger-icon {
-    /* margin-right: 1rem; */
-    color: var(--color-text-link);
+  /* .chapter-head{
+    margin-left: -77%;
+  } */
+
+  .chapter-header {
+    /* display: inline-block; */
+    text-align: right;
     text-transform: uppercase;
-    
+    z-index: 50;
+    /* background-color: white */
+}
+
+  #chp-head-0, #chp-head-1, #chp-head-2, #chp-head-3, #chp-head-4, #chp-head-5, #chp-head-6 {
+    display: block;
+    top: 0.45rem;
+    color: var(--color-text-link-hover);
+    /* background-color: white; */
+    /* border:1px solid red; */
   }
-  
+
   .dropdown {
     display: none;
     position: absolute;
@@ -326,52 +488,25 @@ summary{
     /* padding: 1rem ; */
     text-decoration: none;
     background-color: var(--color-text-link-hover);
-    color: white;
+    /* color: white; */
   }
   
-
-  main {
-    padding-left: 5%; /* Adjust padding values as needed */
-    padding-right: 5%; /* Adjust padding values as needed */
-  }
-
-  #name{
-    padding: 5%; 
-  }
-
-  p {
-    text-indent:3rem; /* Adjust text-indent as needed */
-    font-size: 0.8rem;
-  }
-
-  h1 {
-    font-size: 5.8rem; /* Adjust font size as needed */
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
     padding-left: 1rem;
-    line-height: 100%;
+    margin-top: -0.6rem;
+    z-index: 80;
+  }
+  
+  .burger-icon {
+    /* margin-right: 1rem; */
+    color: var(--color-text-link);
+    text-transform: uppercase;
     
   }
 
-  h2 {
-    font-size: 2.1rem; /* Adjust font size as needed */
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    text-indent: 3rem; /* Adjust text-indent as needed */
-    text-align: left;
-  }
-  #name{
-    font-size: 0.8rem;
-  }
-
-  h1,
-  h2,
-  h3,
-  #name
-   {
-    margin-left: 0;
-    margin-right: 0; 
-  }
 }
 
 
