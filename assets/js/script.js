@@ -19,6 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
+//   window.addEventListener("scroll", function() {
+//     // Check if the user has reached the bottom of the page
+//     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+//         // If at the bottom, prevent default scroll behavior
+//         window.scrollTo(0, document.body.offsetHeight - window.innerHeight);
+//     }
+// });
+
+
 
 
   // document.addEventListener("DOMContentLoaded", function () {
