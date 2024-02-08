@@ -388,7 +388,7 @@ div.page-wrapper {
   }
 
   .sidenote:before {
-    font-size: 0.85rem;
+    font-size: 1rem;
     /* top: -0.5rem; */
   }
 
@@ -585,7 +585,7 @@ div.page-wrapper {
       float: right;
       clear: right;
       margin-right: 0%;
-      width: 35%;
+      width: 40%;
       /* margin-top: 1rem; */
       margin-bottom: 0;
       margin-left: 0.3rem;
@@ -598,10 +598,6 @@ div.page-wrapper {
       text-align: left;
       border: 1rem solid white;
       padding-top: 1rem;
-    }
-
-    #sn-2{
-      display: flex;
     }
 
     nav{
@@ -629,7 +625,13 @@ div.page-wrapper {
     background-color: white;
     margin-left: 45%;
     margin-right: -3%;
+    text-decoration: none;
+    list-style: none;
   }
+
+a{
+  color: var(--color-text-link-hover) ;
+}
 
   #chp-head-0, #chp-head-1, #chp-head-2, #chp-head-3, #chp-head-4, #chp-head-5, #chp-head-6 {
     display: block;
