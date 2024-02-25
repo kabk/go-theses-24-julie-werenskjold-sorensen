@@ -16,6 +16,13 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: 'Compagnon';
+  src: url('../fonts/Compagnon/Compagnon-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 
 @font-face {
     font-family: 'Keroine';
@@ -32,6 +39,7 @@
   --color-text: rgb(84, 8, 8);
   --color-text-link: rgb(241, 207, 207);
   --color-text-link-hover: rgb(248, 0, 0);
+  --color-spirit:rgb(94, 136, 144);
   font-family: 'Keroine';
   --margin: 0;
 }
@@ -92,7 +100,7 @@ main{
 }
 
 p{
-  text-indent: 6rem;
+  /* text-indent: 6rem; */
   font-size: 1.4rem;
   text-align: justify;
   text-justify: inter-word;
@@ -149,6 +157,29 @@ h2{
   text-decoration: underline 0.125rem;
 }
 
+h4 {
+  font-family: 'Compagnon';
+  font-size: 1.2rem;
+  text-align: center;
+  padding-left:3rem;
+  padding-right:3rem;
+  font-weight: normal;
+  /* font-style: italic;  */
+}
+
+h4 span {
+  text-align: center;
+  color: var(--color-text) !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--color-text);
+}
+
+h4 span:hover {
+  background-color: white;
+}
 
 h3{
   font-size: 2.6rem;  
@@ -265,11 +296,33 @@ label.margin-toggle:not(.sidenote-number) {
   color: var(--color-text-link-hover);
 }
 
-span{
+span {
   color: var(--color-text-link-hover);
 }
 
+.caption {
+  width: 19vW;
+  float: left;
+  margin-left: -32%;
+  margin-top: -3vH;
+  margin-bottom: 0;
+  position: relative;
+  font-size:1rem;
+  text-align: justify;
+  color: #ef2a30;
+  hyphens: auto;
+  line-height: 130%;
+  padding: 2vW;
+}
 
+/* .term {
+  color: #ef2a30;
+} */
+
+.caption img {
+  width: 19vW;
+  margin-bottom:1vH;
+}
 
 
 /* PAGE STYLES */
@@ -331,7 +384,7 @@ div.page-wrapper {
   }
 
   p {
-    text-indent:3rem; 
+    /* text-indent:3rem;  */
     font-size: 0.9rem;;
   }
 
@@ -363,7 +416,7 @@ div.page-wrapper {
   }
   
   p a {
-    text-indent: 2em; 
+    /* text-indent: 2em;  */
   }
 
   .sidenote-number:after {
