@@ -35,7 +35,7 @@
 /* VARIABLES */
 
 :root {
-  --color-background: rgb(255, 255, 255);
+  --color-background: rgb(255, 255, 255, .96);
   --color-text: rgb(84, 8, 8);
   --color-text-link: rgb(241, 207, 207);
   --color-text-link-hover: rgb(248, 0, 0);
@@ -178,7 +178,7 @@ h4 span {
 }
 
 h4 span:hover {
-  background-color: white;
+  background-color: transparent;
 }
 
 h3{
@@ -191,7 +191,18 @@ h3{
   padding-bottom:1rem;
   /* font-family: 'Nameless' */
 }
-
+.main-header {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.thesis {
+  /* position: relative; */
+  margin-top: 100vh;
+  padding-top: 0.025rem;
+  box-shadow: rgb(255, 255, 255) 0px 0px 1rem 1rem;
+  /* z-index: +1; */
+}
 .chapter-header{
   display: block;
   text-transform: uppercase;
@@ -246,7 +257,7 @@ h3{
     vertical-align: baseline;
     position: relative;
     text-align: left;
-    border: 0.5rem solid white;
+    border: 0.5rem solid transparent;
     padding-top: 1rem;
   }
 
@@ -296,6 +307,26 @@ label.margin-toggle:not(.sidenote-number) {
   color: var(--color-text-link-hover);
 }
 
+.bibliography-text > p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.bibliography-text > p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
 span {
   color: var(--color-text-link-hover);
 }
@@ -396,6 +427,7 @@ div.page-wrapper {
 
   h2 {
     font-size: 2.1rem; 
+    /* padding-top: 1rem; */
   }
 
   h3 {
@@ -605,7 +637,7 @@ div.page-wrapper {
       vertical-align: baseline;
       position: relative;
       text-align: left;
-      border: 1rem solid white;
+      border: 1rem solid transparent;
       padding-top: 1rem;
     }
 
