@@ -102,13 +102,20 @@ p > .sidenote-wrapper {
   text-indent: 0;
 }
 
-#name{
+#name, #footer{
   text-align: right;
   font-size: 1rem;
   margin-right: 3%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: var(--color-text-link); 
 }
+
+#name {
+  text-transform: uppercase;
+}
+
+
+
 
 h1 {
   color: var(--color-text-captions);
@@ -185,10 +192,10 @@ h4 span:hover {
 .spirit{
   font-family: 'Compagnon';
   font-size: 1.2rem;
-  padding-left:0.5rem;
+  padding-left:0.rem;
   padding-right:0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
   font-weight: normal;
   color: var(--color-text);
   background-color: var(--color-text);
@@ -229,7 +236,7 @@ h5{
 .lines{
   border: none; 
   height: 1px;
-  background-color: var(  --color-text);
+  background-color: var(--color-text-link-hover);
   margin: 20px 0; 
   
 }
