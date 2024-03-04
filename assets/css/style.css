@@ -32,8 +32,6 @@
     font-display: block;
 }
 
-/* VARIABLES */
-
 :root {
   --color-background: rgb(255, 255, 255, .96);
   --color-text: rgb(84, 8, 8);
@@ -43,11 +41,6 @@
   font-family: 'Keroine';
   --margin: 0;
 }
-
-
-
-
-/* GENERAL STYLES */
 
 html {
   font: var(--font-size) var(--font-family);
@@ -100,7 +93,6 @@ main{
 }
 
 p{
-  /* text-indent: 6rem; */
   font-size: 1.4rem;
   text-align: justify;
   text-justify: inter-word;
@@ -120,7 +112,6 @@ p > .sidenote-wrapper {
 
 h1 {
   color: var(--color-text-captions);
-  /* display: block; */
   z-index: 1;
   font-size: 15rem;
   text-align: center;
@@ -130,7 +121,7 @@ h1 {
   letter-spacing: -0.2rem;
   text-transform: uppercase;
   line-height: 95%;
-  /* position: absolute; */
+
 }
 
 /* .landingpage {
@@ -145,7 +136,6 @@ h1 {
 } */
 
 
-
 h2{
   color: var(--color-text-link-hover);
   font-size: 7rem;
@@ -155,6 +145,17 @@ h2{
   font-weight: normal;
   font-style: italic;
   text-decoration: underline 0.125rem;
+}
+
+h3{
+  font-size: 2.6rem;  
+  font-weight: normal;
+  text-align: left;
+  color: var(--color-text-captions);
+  margin:0;
+  padding-top:3rem;
+  padding-bottom:1rem;
+  /* font-family: 'Nameless' */
 }
 
 h4 {
@@ -170,10 +171,10 @@ h4 {
 h4 span {
   text-align: center;
   color: var(--color-text) !important;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-left:0.5rem;
+  padding-right:0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   background-color: var(--color-text);
 }
 
@@ -181,16 +182,29 @@ h4 span:hover {
   background-color: transparent;
 }
 
-h3{
-  font-size: 2.6rem;  
+.spirit{
+  font-family: 'Compagnon';
+  font-size: 1.2rem;
+  padding-left:0.5rem;
+  padding-right:0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   font-weight: normal;
-  text-align: left;
-  color: var(--color-text-captions);
-  margin:0;
-  padding-top:3rem;
-  padding-bottom:1rem;
-  /* font-family: 'Nameless' */
+  color: var(--color-text);
+  background-color: var(--color-text);
 }
+
+.spirit:hover {
+  background-color: transparent;
+}
+
+h5{
+  font-size: 1.5rem;
+  font-weight: normal;
+  /* text-align: right; */
+  
+}
+
 .main-header {
   position: fixed;
   top: 0;
@@ -212,30 +226,33 @@ h3{
   margin-left: -47%;
 }
 
-#chp-head-0,#chp-head-1, #chp-head-2,#chp-head-3,#chp-head-4,#chp-head-5,#chp-head-6 {
-  position: sticky;
+.lines{
+  border: none; 
+  height: 1px;
+  background-color: var(  --color-text);
+  margin: 20px 0; 
+  
 }
+
+#chp-head-0,#chp-head-1, #chp-head-2,#chp-head-3,#chp-head-4,#chp-head-5,#chp-head-6,#chp-head-7 {
+  position: sticky;}
+
 #chp-head-0{
-  top: 1.5rem;
-}
+  top: 1.5rem;}
 #chp-head-1 {
-  top: 3.5rem;
-}
+  top: 3.5rem;}
 #chp-head-2 {
-  top: 5.5rem;
-}
+  top: 5.5rem;}
 #chp-head-3 {
-  top: 7.5rem;
-}
+  top: 7.5rem;}
 #chp-head-4 {
-  top: 9.5rem;
-}
+  top: 9.5rem;}
 #chp-head-5 {
-  top: 11.5rem;
-}
+  top: 11.5rem;}
 #chp-head-6 {
-  top: 13.5rem;
-}
+  top: 13.5rem;}
+#chp-head-7{
+  top: 15.5rem;}
 
 .mobile-only-text {
   display: none; 
@@ -293,7 +310,7 @@ label.margin-toggle:not(.sidenote-number) {
   display: none;
 }
 
-#chapter-6{
+#chapter-7{
   color: var(--color-text-link);
 }
 
