@@ -368,6 +368,7 @@ span {
   hyphens: auto;
   line-height: 130%;
   padding: 2vW;
+  text-align: right;
 }
 
 /* .term {
