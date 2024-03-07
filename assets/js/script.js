@@ -19,37 +19,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
-//   window.addEventListener("scroll", function() {
-//     // Check if the user has reached the bottom of the page
-//     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-//         // If at the bottom, prevent default scroll behavior
-//         window.scrollTo(0, document.body.offsetHeight - window.innerHeight);
-//     }
-// });
-
-
-
-
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   var chapterHeaders = document.querySelectorAll('.chapter-header');
-
-  //   function updateStickyHeaders() {
-  //     var scrollY = window.scrollY || window.pageYOffset;
-
-  //     for (var i = chapterHeaders.length - 1; i >= 0; i--) {
-  //       var headerOffset = chapterHeaders[i].offsetTop;
-
-  //       if (scrollY >= headerOffset) {
-  //         chapterHeaders.forEach(header => header.classList.remove('active'));
-  //         chapterHeaders[i].classList.add('active');
-  //         break;
-  //       }
-  //     }
-  //   }
-
-  //   window.addEventListener('scroll', updateStickyHeaders);
-  //   window.addEventListener('resize', function () {
-  //     chapterHeaders.forEach(header => header.classList.remove('active'));
-  //     updateStickyHeaders();
-  //   });
-  // });
