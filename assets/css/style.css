@@ -492,7 +492,7 @@ div.page-wrapper {
 
   .bibliography-text > p:not(b > p){
     color: var(--color-text-link);
-    font-size: 0.8rem;
+    font-size: rem;
     text-align: left;
   }
 
@@ -534,7 +534,7 @@ div.page-wrapper {
     text-transform: uppercase;
     z-index: 50;
     background-color: white;
-    margin-left: 45%;
+    margin-left: 35%;
   }
 
   #chp-head-0, #chp-head-1, #chp-head-2, #chp-head-3, #chp-head-4, #chp-head-5, #chp-head-6, #chp-head-7 {
@@ -740,7 +740,7 @@ div.page-wrapper {
     text-transform: uppercase;
     z-index: 50;
     background-color: white;
-    margin-left: 75%;
+    margin-left: 25%;
     margin-right: -3%;
     text-decoration: none;
     list-style: none;
