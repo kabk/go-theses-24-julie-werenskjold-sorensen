@@ -562,10 +562,11 @@ div.page-wrapper {
 
   .button {
     display: inline-block;
-    padding-left: 0.5rem;
+    padding-left: 0.8rem;
     padding-right: 0.5rem;
     text-decoration: none;
-    background-color: var(--color-text-link-hover);
+    background-color: white;
+    color: var(--color-text-link-hover);
   }
   
   .burger-menu {
@@ -581,6 +582,23 @@ div.page-wrapper {
     color: var(--color-text-link);
     text-transform: uppercase; 
   }
+
+  .button {
+    display: inline-block;
+    padding-left: 0.8rem;
+    box-shadow: rgb(255, 255, 255) 0px 0px 1rem 1rem;
+    padding-right: 0.5rem;
+    text-decoration: none;
+    /* background-color: var(--color-text-link-hover);
+    color: var(--color-text-link-hover); */
+  }
+
+   /* ul{ 
+    background-color: aqua;
+    z-index: 80;
+    width: 50%;
+    padding: 1rem;
+   } */
 
   .caption {
     width: 100%;
@@ -750,36 +768,48 @@ div.page-wrapper {
   .dropdown li {
     margin-bottom: 1rem;
   }
-
   .button {
     display: inline-block;
-    padding-left: 0.5rem;
+    padding-left: 0.8rem;
     padding-right: 0.5rem;
     text-decoration: none;
-    background-color: var(--color-text-link-hover);
-    /* color: white; */
+    background-color: white;
+    color: var(--color-text-link-hover);
   }
   
   .burger-menu {
     display: flex;
     align-items: center;
     position: relative;
-    padding-left: 1rem;
-    margin-top: -0.6rem;
+    padding-left: 5%;
+    margin-top: -0.3rem;
     z-index: 80;
   }
   
   .burger-icon {
     color: var(--color-text-link);
-    text-transform: uppercase;
+    text-transform: uppercase; 
+    margin-left: -1.4rem;
   }
+
+  .button {
+    display: inline-block;
+    padding-left: 0.8rem;
+    box-shadow: rgb(255, 255, 255) 0px 0px 1rem 1rem;
+    padding-right: 0.5rem;
+    text-decoration: none;
+  }
+
+  /* ul {
+    padding-left: 1rem;
+  } */
+
 
   .caption {
     width: 100%;
     float: left;
     clear: left;
     margin-left: 0;
-    /* margin-top: 1vH; */
     margin-bottom: 1vH;
     vertical-align: baseline;
     position: relative;
