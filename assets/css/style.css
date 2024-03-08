@@ -490,6 +490,12 @@ div.page-wrapper {
     display: inline;
   }
 
+  .bibliography-text > p:not(b > p){
+    color: var(--color-text-link);
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
   .sidenote,
   .marginnote {
       display: none;
