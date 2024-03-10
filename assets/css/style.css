@@ -116,7 +116,7 @@ p > .sidenote-wrapper {
 h1 {
   color: var(--color-text-captions);
   z-index: 1;
-  font-size: 15rem;
+  font-size: 13vw;
   text-align: center;
   padding-left: 3rem;
   padding-right: 3rem;
