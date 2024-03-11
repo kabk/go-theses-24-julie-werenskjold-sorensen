@@ -96,6 +96,11 @@ p{
   font-size: 1.4rem;
   text-align: justify;
   text-justify: inter-word;
+  /* word-break: break-all; */
+  /* hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphenate-character: '-'; */
 }
 
 p > .sidenote-wrapper {
@@ -212,7 +217,7 @@ h5{
 
 .main-header {
   position: fixed;
-  top: 0;
+  top: -2vw;
   z-index: -1;
 }
 .thesis {
@@ -440,6 +445,10 @@ div.page-wrapper {
   p {
     /* text-indent:3rem;  */
     font-size: 0.95rem;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphenate-character: '-';
   }
 
   h1 {
